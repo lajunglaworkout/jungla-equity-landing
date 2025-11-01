@@ -84,42 +84,7 @@ function initScrollAnimations() {
 }
 
 function initInfiniteScroll() {
-  const sections = document.querySelectorAll('.accordion-section');
-  
-  if (sections.length === 0) return;
-  
-  const scrollObserverOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
-  };
-
-  const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const header = entry.target.querySelector('.accordion-header');
-        const content = entry.target.querySelector('.accordion-content');
-        
-        // Auto-open section when it comes into view
-        if (!header.classList.contains('active')) {
-          header.classList.add('active');
-          content.classList.add('active');
-          console.log('✅ Auto-opened section:', entry.target.id);
-        }
-      } else {
-        // Close section when it leaves view
-        const header = entry.target.querySelector('.accordion-header');
-        const content = entry.target.querySelector('.accordion-content');
-        
-        if (header.classList.contains('active')) {
-          header.classList.remove('active');
-          content.classList.remove('active');
-          console.log('❌ Auto-closed section:', entry.target.id);
-        }
-      }
-    });
-  }, scrollObserverOptions);
-
-  sections.forEach(section => {
-    scrollObserver.observe(section);
-  });
+  // Scroll snap está habilitado en CSS
+  // Las secciones se abren SOLO al hacer click en el header
+  console.log('📜 Scroll infinito activado - Las secciones se abren al hacer click');
 }
