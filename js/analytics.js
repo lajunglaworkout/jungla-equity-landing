@@ -1,140 +1,173 @@
-// Analytics Hormozi - Tracking de conversión
-class HormoziAnalytics {
-  constructor() {
-    this.sessionId = this.generateSessionId();
-    this.startTime = Date.now();
-    this.events = [];
-    this.init();
+// ============================================
+// ANALYTICS CRÍTICO - GA4 + Facebook Pixel
+// ============================================
+
+// Configuración
+const ANALYTICS_CONFIG = {
+  ga4: {
+    measurementId: 'G-CFF9X6107G',
+    enabled: true
+  },
+  facebook: {
+    pixelId: '', // Añadir cuando tengas el ID de Facebook
+    enabled: false
   }
+};
+
+// ============================================
+// FUNCIONES DE TRACKING
+// ============================================
+
+// Inicializar Google Analytics 4
+function initGA4() {
+  if (!ANALYTICS_CONFIG.ga4.enabled) return;
   
-  generateSessionId() {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-  }
+  // Cargar gtag.js
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_CONFIG.ga4.measurementId}`;
+  document.head.appendChild(script);
   
-  init() {
-    this.trackPageView();
-    this.trackScrollDepth();
-    this.trackTimeOnPage();
-    this.trackCTAClicks();
-    this.trackFormInteractions();
-    this.trackSectionViews();
-  }
+  // Configurar dataLayer
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
   
-  trackPageView() {
-    this.log('page_view', {
-      page_title: document.title,
-      page_location: window.location.href,
-      referrer: document.referrer
-    });
-  }
+  gtag('js', new Date());
+  gtag('config', ANALYTICS_CONFIG.ga4.measurementId, {
+    'anonymize_ip': true, // RGPD
+    'send_page_view': true
+  });
   
-  trackScrollDepth() {
-    let maxScroll = 0;
-    window.addEventListener('scroll', () => {
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-        if (maxScroll % 25 === 0) {
-          this.log('scroll_depth', { depth: Math.round(maxScroll) });
-        }
-      }
-    });
-  }
+  console.log('✅ Google Analytics 4 inicializado');
+}
+
+// Inicializar Facebook Pixel
+function initFacebookPixel() {
+  if (!ANALYTICS_CONFIG.facebook.enabled || !ANALYTICS_CONFIG.facebook.pixelId) return;
   
-  trackTimeOnPage() {
-    setInterval(() => {
-      const timeOnPage = Math.round((Date.now() - this.startTime) / 1000);
-      if (timeOnPage % 30 === 0) {
-        this.log('time_on_page', { seconds: timeOnPage });
-      }
-    }, 1000);
-  }
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
   
-  trackCTAClicks() {
-    document.querySelectorAll('[onclick*="scrollToForm"], .btn-primary, .btn-investment').forEach(btn => {
-      btn.addEventListener('click', () => {
-        this.log('cta_click', {
-          button_text: btn.textContent.trim(),
-          button_class: btn.className,
-          section: btn.closest('section')?.id || 'unknown'
-        });
-      });
-    });
-  }
+  fbq('init', ANALYTICS_CONFIG.facebook.pixelId);
+  fbq('track', 'PageView');
   
-  trackFormInteractions() {
-    const form = document.getElementById('investmentForm');
-    if (form) {
-      form.querySelectorAll('input, select, textarea').forEach(field => {
-        field.addEventListener('focus', () => {
-          this.log('form_field_focus', { field_name: field.name });
-        });
-        
-        field.addEventListener('change', () => {
-          this.log('form_field_change', { field_name: field.name });
-        });
-      });
-      
-      form.addEventListener('submit', () => {
-        this.log('form_submit', { form_id: form.id });
-      });
-    }
-  }
+  console.log('✅ Facebook Pixel inicializado');
+}
+
+// ============================================
+// EVENTOS CRÍTICOS
+// ============================================
+
+// Evento: Scroll al formulario
+function trackScrollToForm() {
+  const form = document.getElementById('form');
+  if (!form) return;
   
-  trackSectionViews() {
-    const sections = document.querySelectorAll('section[id]');
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.log('section_view', {
-            section_id: entry.target.id,
-            section_title: entry.target.querySelector('h2')?.textContent || 'Unknown'
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (window.gtag) {
+          gtag('event', 'scroll_to_form', {
+            'event_category': 'conversion',
+            'event_label': 'Formulario Visible'
           });
         }
-      });
-    }, { threshold: 0.5 });
-    
-    sections.forEach(section => sectionObserver.observe(section));
-  }
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
   
-  log(eventName, eventData) {
-    const event = {
-      sessionId: this.sessionId,
-      eventName,
-      eventData,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent
-    };
-    
-    this.events.push(event);
-    console.log('📊 Analytics:', eventName, eventData);
-    
-    // Enviar a Supabase cada 10 eventos
-    if (this.events.length % 10 === 0) {
-      this.sendToSupabase();
+  observer.observe(form);
+}
+
+// Evento: Click en CTAs
+function trackCTAClicks() {
+  // CTA Hero
+  document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (window.gtag) {
+        gtag('event', 'cta_click', {
+          'event_category': 'conversion',
+          'event_label': btn.textContent.trim(),
+          'value': 1
+        });
+      }
+    });
+  });
+  
+  // CTAs intermedios
+  document.querySelectorAll('.cta-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (window.gtag) {
+        gtag('event', 'cta_mid_click', {
+          'event_category': 'conversion',
+          'event_label': 'CTA Intermedio'
+        });
+      }
+    });
+  });
+}
+
+// Evento: Formulario enviado
+function trackFormSubmit() {
+  const form = document.getElementById('form');
+  if (!form) return;
+  
+  form.addEventListener('submit', () => {
+    // Google Analytics
+    if (window.gtag) {
+      gtag('event', 'conversion', {
+        'send_to': ANALYTICS_CONFIG.ga4.measurementId,
+        'event_category': 'lead',
+        'event_label': 'Formulario Enviado',
+        'value': 1
+      });
     }
-  }
-  
-  async sendToSupabase() {
-    try {
-      await fetch('/.netlify/functions/track-analytics', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ events: this.events })
+    
+    // Facebook Pixel
+    if (window.fbq && ANALYTICS_CONFIG.facebook.enabled) {
+      fbq('track', 'Lead', {
+        content_name: 'Formulario Inversión',
+        value: 20000,
+        currency: 'EUR'
       });
-      this.events = [];
-    } catch (error) {
-      console.error('Analytics error:', error);
+    }
+  });
+}
+
+// ============================================
+// INICIALIZACIÓN
+// ============================================
+
+function initAnalytics() {
+  // Verificar consentimiento de cookies
+  const cookieConsent = localStorage.getItem('cookieConsent');
+  
+  if (cookieConsent === 'accepted') {
+    initGA4();
+    initFacebookPixel();
+    
+    // Esperar a que el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        trackScrollToForm();
+        trackCTAClicks();
+        trackFormSubmit();
+      });
+    } else {
+      trackScrollToForm();
+      trackCTAClicks();
+      trackFormSubmit();
     }
   }
 }
 
-// Inicializar analytics
-const analytics = new HormoziAnalytics();
-
-// Enviar eventos pendientes al cerrar la página
-window.addEventListener('beforeunload', () => {
-  if (analytics.events.length > 0) {
-    analytics.sendToSupabase();
-  }
-});
+// Iniciar analytics
+initAnalytics();
