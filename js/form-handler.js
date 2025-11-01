@@ -9,7 +9,9 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const WEB3FORMS_ACCESS_KEY = 'ece2eff8-c97c-4c3c-9914-ba05410e5e15';
 
 // Manejar el envío del formulario
-document.getElementById('investmentForm').addEventListener('submit', async (e) => {
+const investmentForm = document.getElementById('form');
+if (investmentForm) {
+  investmentForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   
   const submitButton = e.target.querySelector('button[type="submit"]');
@@ -125,18 +127,22 @@ document.getElementById('email').addEventListener('blur', (e) => {
   } else {
     e.target.style.borderColor = 'rgba(180, 255, 0, 0.2)';
   }
-});
+  });
+}
 
 // Validación en tiempo real de teléfono
-document.getElementById('phone').addEventListener('blur', (e) => {
-  const phone = e.target.value;
-  const phoneRegex = /^[+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,9}$/;
-  
-  if (phone && !phoneRegex.test(phone)) {
-    e.target.style.borderColor = '#ff4444';
-  } else {
-    e.target.style.borderColor = 'rgba(180, 255, 0, 0.2)';
-  }
-});
+const phoneInput = document.getElementById('phone');
+if (phoneInput) {
+  phoneInput.addEventListener('blur', (e) => {
+    const phone = e.target.value;
+    const phoneRegex = /^[+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,9}$/;
+    
+    if (phone && !phoneRegex.test(phone)) {
+      e.target.style.borderColor = '#ff4444';
+    } else {
+      e.target.style.borderColor = 'rgba(180, 255, 0, 0.2)';
+    }
+  });
+}
 
 console.log('✅ Form handler cargado correctamente');

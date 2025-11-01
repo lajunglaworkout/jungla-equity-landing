@@ -1219,38 +1219,6 @@
 <script src="js/analytics.js"></script>
 
 <!-- Testimonials Auto-scroll -->
-<script>
-let currentTestimonial = 0;
-const testimonials = document.querySelectorAll('.testimonial-card');
-const dots = document.querySelectorAll('.dot');
-
-function showTestimonial(index) {
-  testimonials.forEach((card, i) => {
-    card.classList.remove('active');
-    dots[i].classList.remove('active');
-  });
-  
-  testimonials[index].classList.add('active');
-  dots[index].classList.add('active');
-  currentTestimonial = index;
-}
-
-function nextTestimonial() {
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  showTestimonial(currentTestimonial);
-}
-
-function prevTestimonial() {
-  currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-  showTestimonial(currentTestimonial);
-}
-
-function goToTestimonial(index) {
-  showTestimonial(index);
-}
-
-// Auto-scroll cada 5 segundos
-setInterval(nextTestimonial, 5000);
-</script>
+<script src="js/testimonials.js"></script>
 </body>
 </html>
