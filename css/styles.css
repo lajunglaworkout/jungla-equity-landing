@@ -223,6 +223,47 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
   background: rgba(180, 255, 0, 0.1);
 }
 .pillar-features li:last-child { border-bottom: none; }
+
+/* Values Checklist */
+.values-list-container {
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+.values-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.values-checklist li {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 20px 0 20px 40px;
+  border-bottom: 1px solid rgba(180, 255, 0, 0.15);
+  position: relative;
+  line-height: 1.7;
+  transition: all 300ms;
+}
+.values-checklist li:last-child {
+  border-bottom: none;
+}
+.values-checklist li .check-icon {
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: 900;
+  font-size: 20px;
+  top: 20px;
+}
+.values-checklist li strong {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+.values-checklist li:hover {
+  padding-left: 48px;
+  background: rgba(180, 255, 0, 0.05);
+  border-left: 4px solid var(--primary-green);
+}
+
 .card:hover { border-color: var(--primary-green); box-shadow: 0 8px 24px rgba(180,255,0,0.1); }
 .card.highlight { border-color: var(--accent-yellow); }
 .card .icon { font-size: 48px; margin-bottom: 20px; }
