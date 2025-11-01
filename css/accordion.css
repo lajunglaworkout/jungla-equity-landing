@@ -2,11 +2,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-body {
-  scroll-snap-type: y mandatory;
 }
 
 .accordion-wrapper {
@@ -18,7 +13,6 @@ body {
   background-attachment: fixed;
   padding: 60px 0;
   position: relative;
-  scroll-snap-type: y mandatory;
 }
 
 .accordion-container {
@@ -31,9 +25,6 @@ body {
   margin-bottom: 24px;
   position: relative;
   overflow: hidden;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scroll-margin-top: 80px;
 }
 
 .accordion-header {
