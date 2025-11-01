@@ -1,0 +1,392 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   BACKGROUNDS IMPACTANTES - JUNGLA & ABSTRACT
+   Fondos con imágenes de alta calidad, parallax, overlays
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ECOSYSTEM SECTION - JUNGLA VERDE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.ecosystem-section {
+  background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%),
+    url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=90') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+  position: relative;
+}
+
+.ecosystem-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(180, 255, 0, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ecosystem-section .section-title,
+.ecosystem-section .section-subtitle {
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.ecosystem-section .pillar-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   WHY NOW SECTION - HOJAS TROPICALES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.why-now-section {
+  background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1920&q=90') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   STRUCTURE SECTION - PATRÓN GEOMÉTRICO
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.structure-section {
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97) 0%, rgba(248, 249, 250, 0.95) 100%),
+    url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=80') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+.structure-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(180, 255, 0, 0.02) 10px,
+      rgba(180, 255, 0, 0.02) 20px
+    );
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TRANSPARENCY SECTION - NATURALEZA ABSTRACTA
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.transparency-section {
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 255, 0.93) 100%),
+    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85') !important;
+  background-size: cover !important;
+  background-position: center right !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROOF SECTION - BAMBÚ VERDE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.proof-section {
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.94) 100%),
+    url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=1920&q=90') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+  position: relative;
+}
+
+.proof-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(180, 255, 0, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COMMITMENT SECTION - JUNGLA OSCURA
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.commitment-section {
+  background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.85) 100%),
+    url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1920&q=90') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+.commitment-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(180, 255, 0, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROCESS SECTION - HOJAS ABSTRACTAS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.process-section {
+  background-image: 
+    linear-gradient(180deg, rgba(248, 249, 250, 0.95) 0%, rgba(255, 255, 255, 0.92) 50%, rgba(248, 249, 250, 0.95) 100%),
+    url('https://images.unsplash.com/photo-1580974852861-c381510bc98a?w=1920&q=85') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TESTIMONIALS SECTION - TEXTURA VERDE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.testimonials-section {
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.95) 100%),
+    url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=85') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   INVESTMENT OPTIONS - NATURALEZA VIBRANTE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.investment-options {
+  background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 249, 255, 0.93) 50%, rgba(255, 255, 255, 0.95) 100%),
+    url('https://images.unsplash.com/photo-1572715376701-98568319fd44?w=1920&q=90') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+  position: relative;
+}
+
+.investment-options::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: radial-gradient(ellipse at top, rgba(180, 255, 0, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CONTACT FORM - HOJAS SUAVES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.contact-form-section {
+  background-image: 
+    linear-gradient(135deg, rgba(248, 249, 250, 0.96) 0%, rgba(255, 255, 255, 0.94) 100%),
+    url('https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=1920&q=85') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   EFECTOS ESPECIALES - PARALLAX Y BLUR
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Añadir contenido elevado sobre fondos */
+section[class*="section"] {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cards con glassmorphism sobre fondos de imagen */
+.ecosystem-section .pillar-card,
+.transparency-section .mockup-container,
+.proof-section .proof-card,
+.process-section .timeline-content,
+.testimonials-section .testimonial-card,
+.investment-options .investment-card {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* Secciones oscuras - ajustar cards */
+.why-now-section .benefit-item,
+.commitment-section .commitment-card {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   EFECTOS DE SCROLL - PARALLAX AVANZADO
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Efecto de profundidad en scroll */
+@media (min-width: 1024px) {
+  .ecosystem-section,
+  .why-now-section,
+  .transparency-section,
+  .proof-section,
+  .commitment-section,
+  .process-section,
+  .testimonials-section,
+  .investment-options,
+  .contact-form-section {
+    background-attachment: fixed;
+  }
+}
+
+/* Responsive - desactivar parallax en móvil */
+@media (max-width: 1023px) {
+  .ecosystem-section,
+  .why-now-section,
+  .transparency-section,
+  .proof-section,
+  .commitment-section,
+  .process-section,
+  .testimonials-section,
+  .investment-options,
+  .contact-form-section {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VARIACIONES ALTERNATIVAS - PARA CAMBIAR FÁCILMENTE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Opción 1: Jungla intensa (más verde) */
+.bg-jungle-intense {
+  background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 100, 0, 0.4) 100%),
+    url('https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?w=1920&q=90');
+}
+
+/* Opción 2: Abstracto moderno */
+.bg-abstract-modern {
+  background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(180, 255, 0, 0.3) 100%),
+    url('https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=1920&q=90');
+}
+
+/* Opción 3: Naturaleza minimalista */
+.bg-nature-minimal {
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 100%),
+    url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1920&q=85');
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MEJORAS DE LEGIBILIDAD
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Asegurar que el contenido sea legible sobre fondos */
+.section-title,
+.section-subtitle {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards más opacos para mejor legibilidad */
+.value-card,
+.org-card,
+.feature-card,
+.proof-card,
+.investment-card {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Forms con fondo sólido */
+.investment-form {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANIMACIONES DE ENTRADA - EFECTOS DE ZOOM EN FONDOS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes bgZoomIn {
+  from {
+    background-size: 110% auto;
+  }
+  to {
+    background-size: 100% auto;
+  }
+}
+
+/* Aplicar zoom sutil al cargar secciones */
+section[data-animate] {
+  animation: bgZoomIn 1.5s ease-out;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   OVERLAYS DECORATIVOS ADICIONALES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Viñeta sutil en los bordes */
+.ecosystem-section::after,
+.why-now-section::after,
+.commitment-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Noise texture para profundidad */
+.proof-section::after,
+.process-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MODO DE CONTRASTE ALTO (OPCIONAL)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-contrast: high) {
+  .ecosystem-section,
+  .why-now-section,
+  .transparency-section,
+  .proof-section,
+  .commitment-section,
+  .process-section,
+  .testimonials-section,
+  .investment-options,
+  .contact-form-section {
+    background-image: none !important;
+    background-color: var(--gray-50);
+  }
+  
+  .why-now-section,
+  .commitment-section {
+    background-color: var(--dark-bg);
+  }
+}

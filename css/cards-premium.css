@@ -1,0 +1,465 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   TARJETAS ULTRA PREMIUM - EFECTOS 3D Y ANIMACIONES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PROOF CARDS - NÚMEROS CON EFECTOS 3D
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.proof-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+  border: 2px solid var(--gray-200) !important;
+  border-radius: 32px !important;
+  padding: 56px 48px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transform-style: preserve-3d !important;
+  perspective: 1000px !important;
+}
+
+.proof-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-yellow) 100%);
+  border-radius: 32px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.proof-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(180, 255, 0, 0.3), transparent);
+  transition: left 0.8s ease;
+}
+
+.proof-card:hover {
+  transform: translateY(-16px) rotateX(5deg) scale(1.02);
+  border-color: transparent;
+  box-shadow: 
+    0 40px 80px rgba(180, 255, 0, 0.4),
+    0 0 60px rgba(180, 255, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.proof-card:hover::before {
+  opacity: 1;
+}
+
+.proof-card:hover::after {
+  left: 100%;
+}
+
+.proof-number {
+  font-size: clamp(96px, 15vw, 160px) !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  margin-bottom: 32px !important;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-yellow) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  position: relative !important;
+  display: inline-block !important;
+  filter: drop-shadow(0 4px 20px rgba(180, 255, 0, 0.4)) !important;
+  animation: float 3s ease-in-out infinite !important;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BENEFIT CARDS - ICONOS 3D CON NEÓN
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.benefit-item {
+  background: linear-gradient(135deg, rgba(180, 255, 0, 0.12) 0%, rgba(0, 0, 0, 0.4) 100%);
+  border: 2px solid rgba(180, 255, 0, 0.3);
+  border-radius: 28px !important;
+  padding: 48px !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-style: preserve-3d;
+}
+
+.benefit-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(180, 255, 0, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-12px) translateZ(20px);
+  border-color: var(--primary-green);
+  box-shadow: 
+    0 30px 60px rgba(180, 255, 0, 0.5),
+    0 0 80px rgba(180, 255, 0, 0.4),
+    inset 0 1px 0 rgba(180, 255, 0, 0.5);
+}
+
+.benefit-item:hover::before {
+  opacity: 1;
+}
+
+.benefit-icon {
+  font-size: 72px !important;
+  width: 120px !important;
+  height: 120px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-yellow) 100%) !important;
+  border-radius: 28px !important;
+  box-shadow: 
+    0 20px 40px rgba(180, 255, 0, 0.5),
+    0 0 60px rgba(180, 255, 0, 0.3),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 28px !important;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  position: relative !important;
+  animation: pulse 2s ease-in-out infinite !important;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 
+      0 20px 40px rgba(180, 255, 0, 0.5),
+      0 0 60px rgba(180, 255, 0, 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 25px 50px rgba(180, 255, 0, 0.7),
+      0 0 80px rgba(180, 255, 0, 0.5);
+  }
+}
+
+.benefit-item:hover .benefit-icon {
+  transform: rotate(15deg) scale(1.15) translateZ(30px);
+  box-shadow: 
+    0 30px 60px rgba(180, 255, 0, 0.7),
+    0 0 100px rgba(180, 255, 0, 0.6);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VALUE CARDS - EFECTO NEUMÓRFICO 3D
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.value-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f0f0f0 100%);
+  border: none !important;
+  border-radius: 32px !important;
+  padding: 56px 40px !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.15),
+    -12px -12px 24px rgba(255, 255, 255, 0.95);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-yellow) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.value-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(180, 255, 0, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-16px) scale(1.03);
+  box-shadow: 
+    16px 16px 32px rgba(180, 255, 0, 0.3),
+    -16px -16px 32px rgba(255, 255, 255, 1),
+    0 0 60px rgba(180, 255, 0, 0.4);
+}
+
+.value-card:hover::before {
+  transform: scaleX(1);
+}
+
+.value-card:hover::after {
+  opacity: 1;
+}
+
+.value-icon {
+  font-size: 96px !important;
+  margin-bottom: 28px !important;
+  display: inline-block !important;
+  filter: drop-shadow(0 8px 24px rgba(180, 255, 0, 0.4)) !important;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  animation: bounce 2s ease-in-out infinite !important;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.1); }
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.3) rotate(-15deg);
+  filter: drop-shadow(0 12px 32px rgba(180, 255, 0, 0.6));
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   INVESTMENT CARDS - TARJETAS PREMIUM CON GLOW
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.investment-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+  border: 3px solid transparent !important;
+  border-radius: 32px !important;
+  padding: 56px 40px !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.investment-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-yellow) 50%, var(--primary-green) 100%);
+  border-radius: 32px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  animation: rotate-border 4s linear infinite;
+}
+
+@keyframes rotate-border {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.investment-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(180, 255, 0, 0.3) 0%, transparent 60%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.8s ease;
+}
+
+.investment-card:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 
+    0 40px 80px rgba(180, 255, 0, 0.5),
+    0 0 100px rgba(180, 255, 0, 0.4);
+}
+
+.investment-card:hover::before {
+  opacity: 1;
+}
+
+.investment-card:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Badge animado */
+.card-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 12px 24px !important;
+  border-radius: 100px;
+  font-size: 12px !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: badge-glow 2s ease-in-out infinite;
+}
+
+@keyframes badge-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px currentColor;
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px currentColor;
+    transform: scale(1.05);
+  }
+}
+
+.card-badge.available {
+  background: var(--primary-green);
+  color: var(--dark-bg);
+  box-shadow: 0 0 30px rgba(180, 255, 0, 0.6);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TESTIMONIAL CARDS - EFECTO VIDRIO CON BRILLO
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 2px solid rgba(180, 255, 0, 0.2);
+  border-radius: 32px !important;
+  padding: 64px 56px !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(180, 255, 0, 0.1) 50%, transparent 70%);
+  transform: rotate(45deg);
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+  border-color: var(--primary-green);
+  box-shadow: 
+    0 30px 80px rgba(180, 255, 0, 0.3),
+    inset 0 1px 0 rgba(180, 255, 0, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PILLAR CARDS - TARJETAS CON EFECTO TILT 3D
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pillar-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+  border: 2px solid var(--gray-200);
+  border-radius: 32px !important;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(180, 255, 0, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-20px) rotateY(5deg) scale(1.03);
+  border-color: var(--primary-green);
+  box-shadow: 
+    0 40px 80px rgba(180, 255, 0, 0.4),
+    0 0 80px rgba(180, 255, 0, 0.3);
+}
+
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-card.highlight {
+  border: 3px solid var(--primary-green);
+  box-shadow: 
+    0 20px 60px rgba(180, 255, 0, 0.3),
+    0 0 60px rgba(180, 255, 0, 0.2);
+}
+
+.pillar-card.highlight:hover {
+  box-shadow: 
+    0 50px 100px rgba(180, 255, 0, 0.5),
+    0 0 100px rgba(180, 255, 0, 0.4);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   EFECTOS ADICIONALES GLOBALES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Efecto de brillo en hover para todos los títulos de cards */
+.proof-card h3,
+.benefit-content h4,
+.value-card h4,
+.investment-card h3 {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.proof-card:hover h3,
+.benefit-item:hover h4,
+.value-card:hover h4,
+.investment-card:hover h3 {
+  color: var(--primary-green);
+  text-shadow: 0 0 20px rgba(180, 255, 0, 0.5);
+}
+
+/* Efecto stagger en grids */
+.proof-grid .proof-card,
+.benefits-grid .benefit-item,
+.values-grid .value-card,
+.investment-grid .investment-card {
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.proof-grid .proof-card:nth-child(1) { animation-delay: 0.1s; }
+.proof-grid .proof-card:nth-child(2) { animation-delay: 0.2s; }
+.proof-grid .proof-card:nth-child(3) { animation-delay: 0.3s; }
+
+.benefits-grid .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.benefits-grid .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.benefits-grid .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.benefits-grid .benefit-item:nth-child(4) { animation-delay: 0.4s; }
+.benefits-grid .benefit-item:nth-child(5) { animation-delay: 0.5s; }
+.benefits-grid .benefit-item:nth-child(6) { animation-delay: 0.6s; }

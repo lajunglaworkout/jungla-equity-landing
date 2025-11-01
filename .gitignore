@@ -1,0 +1,31 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Excluir archivos grandes (>10MB) - Solo para GitHub
+node_modules/
+backups/*.tar.gz
+# Comentados para Vercel (soporta archivos grandes):
+# assets/videos/*.mp4
+# assets/images/Equipo/DSC_6093.jpg
+# assets/images/Instalaciones/puerto_centro_*.jpg

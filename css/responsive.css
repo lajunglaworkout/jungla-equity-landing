@@ -1,0 +1,56 @@
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+  .grid-3, .grid-4 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+  .nav { gap: 20px; }
+}
+
+@media (max-width: 768px) {
+  .header-container { flex-direction: column; gap: 15px; }
+  .nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .mobile-menu-btn { display: block; }
+  .nav { display: none; }
+  .nav.active { display: flex; flex-direction: column; width: 100%; }
+  
+  .hero { height: auto; padding: 60px 20px; }
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 16px; }
+  .hero .btn { display: block; margin: 10px 0; }
+  
+  .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .card { padding: 30px 20px; }
+  
+  .countdown-banner { padding: 30px 20px; }
+  .countdown { font-size: 24px; }
+  
+  .investment-form { padding: 0 20px; }
+  
+  .org { padding: 20px; }
+  .depts { grid-template-columns: 1fr; }
+  
+  .features { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; margin-bottom: 30px; }
+  .btn { padding: 12px 24px; font-size: 14px; }
+  
+  .hero { padding: 40px 15px; }
+  .hero h1 { font-size: 22px; }
+  .hero p { font-size: 14px; margin-bottom: 20px; }
+  
+  .card { padding: 20px; }
+  .card .icon { font-size: 36px; }
+  
+  .countdown-banner { padding: 20px 15px; }
+  .countdown-banner h3 { font-size: 20px; }
+  .countdown { font-size: 18px; }
+  
+  .inv-card { padding: 20px; }
+  .inv-card h3 { font-size: 18px; }
+  
+  .investment-form { padding: 0 15px; }
+  .investment-form input, .investment-form select { font-size: 16px; }
+}

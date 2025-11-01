@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Jungla - Inversión</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/accordion.css">
+</head>
+<body>
+<header class="header" id="header">
+  <div class="header-container">
+    <div class="logo"><span class="logo-icon">🌿</span><span class="logo-text">La Jungla</span></div>
+    <nav class="nav" id="nav">
+      <a href="#why-now">Por Qué</a>
+      <a href="#structure">Estructura</a>
+      <a href="#transparency">Dashboard</a>
+      <a href="#form" class="nav-cta">Invertir</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+  </div>
+</header>
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/videos/hero-background.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge animate-fade-in">
+      <span class="badge-icon">🔥</span>
+      <span class="badge-text">Oportunidad de Inversión 2025</span>
+    </div>
+    <h1 class="hero-title animate-fade-in" style="animation-delay: 0.2s">
+      15 Inversores Inteligentes Están Posicionándose en el Modelo que Ya Ha Fidelizado +10.000 Usuarios
+    </h1>
+    <p class="hero-subtitle animate-fade-in" style="animation-delay: 0.4s">
+      Invierte en el ecosistema fitness más innovador de España.<br>
+      <strong>Gestión 100% profesional.</strong> <strong>Transparencia total.</strong> <strong>Rentabilidad verificable.</strong>
+    </p>
+    <div class="hero-ctas animate-fade-in" style="animation-delay: 0.6s">
+      <button class="btn btn-primary btn-large" onclick="scrollToForm()">
+        <span class="btn-icon">📊</span>
+        <span class="btn-text">Solicitar Información</span>
+      </button>
+      <button class="btn btn-secondary btn-large" onclick="downloadPDF()">
+        <span class="btn-icon">📄</span>
+        <span class="btn-text">Descargar Presentación</span>
+      </button>
+    </div>
+    <div class="hero-metrics animate-fade-in" style="animation-delay: 0.8s">
+      <div class="metric">
+        <span class="metric-value" data-target="10000">0</span>
+        <span class="metric-plus">+</span>
+        <span class="metric-label">Usuarios Activos</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value" data-target="87">0</span>
+        <span class="metric-percent">%</span>
+        <span class="metric-label">Tasa de Retención</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">4.9</span>
+        <span class="metric-icon">⭐</span>
+        <span class="metric-label">Valoración Google</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value" data-target="8">0</span>
+        <span class="metric-label">Años de Trayectoria</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator animate-bounce">
+    <span class="scroll-text">Descubre más</span>
+    <span class="scroll-arrow">↓</span>
+  </div>
+</section>
+
+<!-- ACCORDION WRAPPER -->
+<div class="accordion-wrapper">
+  <div class="accordion-container">
+
+
+    <!-- Sección: Ecosistema Junglero -->
+    <div class="accordion-section" id="ecosystem">
+      <div class="accordion-header">
+        <div class="accordion-title-wrapper">
+          <div class="accordion-icon">🌿</div>
+          <div class="accordion-title-content">
+            <h2>Ecosistema Junglero</h2>
+            <p class="accordion-subtitle">Tres verticales que se potencian mutuamente</p>
+          </div>
+        </div>
+        <div class="accordion-toggle">
+          <span class="accordion-toggle-icon">+</span>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+  <div class="container">
+    <h2 class="section-title" data-animate="fade-up">No Inviertes en un Gimnasio.<br>Inviertes en un Ecosistema</h2>
+    <p class="section-subtitle" data-animate="fade-up" data-delay="0.1">Tres verticales que se potencian mutuamente para crear valor sostenible</p>
+    
+    <div class="ecosystem-grid">
+      <div class="pillar-card" data-animate="fade-up" data-delay="0.2">
+        <div class="pillar-image">
+          <img src="assets/images/instalaciones/sevilla_centro_1.jpg" alt="Centros Físicos La Jungla" loading="lazy">
+          <div class="pillar-overlay"></div>
+        </div>
+        <div class="pillar-content">
+          <div class="icon-wrapper">💪</div>
+          <h3>Centros Físicos</h3>
+          <p class="pillar-description">Comunidad de Jungler@s fieles con alta retención y engagement. El corazón del ecosistema.</p>
+          <div class="pillar-stats">
+            <div class="pillar-stat">
+              <span class="stat-number">4.9⭐</span>
+              <span class="stat-label">Valoración Google</span>
+            </div>
+            <div class="pillar-stat">
+              <span class="stat-number">87%</span>
+              <span class="stat-label">Retención Anual</span>
+            </div>
+          </div>
+          <ul class="pillar-features">
+            <li>✓ Modelo probado desde 2017</li>
+            <li>✓ Comunidad consolidada</li>
+            <li>✓ Gestión 100% pasiva</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="pillar-card" data-animate="fade-up" data-delay="0.4">
+        <div class="pillar-image">
+          <img src="assets/images/instalaciones/academy_diego.jpg" alt="La Jungla Academy" loading="lazy">
+          <div class="pillar-overlay"></div>
+        </div>
+        <div class="pillar-content">
+          <div class="icon-wrapper">🎓</div>
+          <h3>La Jungla Academy</h3>
+          <p class="pillar-description">Formación práctica que cierra la brecha entre estudios y empleo real en el sector fitness.</p>
+          <div class="pillar-stats">
+            <div class="pillar-stat">
+              <span class="stat-number">87%</span>
+              <span class="stat-label">Inserción Laboral</span>
+            </div>
+            <div class="pillar-stat">
+              <span class="stat-number">200+</span>
+              <span class="stat-label">Alumnos Formados</span>
+            </div>
+          </div>
+          <ul class="pillar-features">
+            <li>✓ Certificación oficial</li>
+            <li>✓ Prácticas garantizadas</li>
+            <li>✓ Red de empleabilidad</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="pillar-card highlight" data-animate="fade-up" data-delay="0.6">
+        <div class="badge-corner">FUTURO</div>
+        <div class="pillar-image">
+          <img src="assets/images/instalaciones/render8.png" alt="La Jungla Tech" loading="lazy">
+          <div class="pillar-overlay pillar-overlay-tech"></div>
+        </div>
+        <div class="pillar-content">
+          <div class="icon-wrapper">🤖</div>
+          <h3>La Jungla Tech</h3>
+          <p class="pillar-description">Medicina preventiva con IA. El futuro de la salud democratizada a precio accesible.</p>
+          <div class="pillar-stats">
+            <div class="pillar-stat">
+              <span class="stat-number">1.300+</span>
+              <span class="stat-label">Dataset Validado</span>
+            </div>
+            <div class="pillar-stat">
+              <span class="stat-number">75€</span>
+              <span class="stat-label">vs 400€ tradicional</span>
+            </div>
+          </div>
+          <ul class="pillar-features">
+            <li>✓ Tecnología IA propia</li>
+            <li>✓ Presentado a Junta Andalucía</li>
+            <li>✓ Escalabilidad exponencial</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="ecosystem-video" data-animate="fade-up">
+      <div class="video-container">
+        <video autoplay muted loop playsinline poster="assets/images/video-poster.jpg">
+          <source src="assets/videos/PUBLICIDAD.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <h4>La Jungla en su esplendor: Una comunidad vibrante</h4>
+          <p>Más que un gimnasio, una comunidad de Jungler@s entrenando juntos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección: Oportunidad Única -->
+    <div class="accordion-section" id="why-now">
+      <div class="accordion-header">
+        <div class="accordion-title-wrapper">
+          <div class="accordion-icon">🔥</div>
+          <div class="accordion-title-content">
+            <h2>Oportunidad Única</h2>
+            <p class="accordion-subtitle">Por qué invertir ahora en La Jungla</p>
+          </div>
+        </div>
+        <div class="accordion-toggle">
+          <span class="accordion-toggle-icon">+</span>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+  <div class="container">
+    <h2 class="section-title white" data-animate="fade-up">Una Oportunidad Única en Expansión</h2>
+    <p class="section-subtitle white" data-animate="fade-up" data-delay="0.1">El momento perfecto para invertir en un modelo probado y escalable</p>
+    
+    <div class="benefits-grid">
+      <div class="benefit-item" data-animate="slide-right">
+        <div class="benefit-icon">✓</div>
+        <div class="benefit-content">
+          <h4>Modelo Validado y Rentable</h4>
+          <p>Más de 10.000 usuarios han confiado en nuestro método desde 2017. Resultados probados.</p>
+        </div>
+      </div>
+      
+      <div class="benefit-item" data-animate="slide-right" data-delay="0.1">
+        <div class="benefit-icon">✓</div>
+        <div class="benefit-content">
+          <h4>Comunidad Consolidada</h4>
+          <p>87% de tasa de fidelización anual, muy superior al 60% promedio del sector fitness.</p>
+        </div>
+      </div>
+      
+      <div class="benefit-item" data-animate="slide-right" data-delay="0.2">
+        <div class="benefit-icon">✓</div>
+        <div class="benefit-content">
+          <h4>Gestión 100% Pasiva</h4>
+          <p>Tú inviertes, nosotros operamos todo el día a día. Equipo profesional dedicado.</p>
+        </div>
+      </div>
+      
+      <div class="benefit-item" data-animate="slide-right" data-delay="0.3">
+        <div class="benefit-icon">✓</div>
+        <div class="benefit-content">
+          <h4>Partners de Primer Nivel</h4>
+          <p>Respaldo institucional y colaboradores de prestigio en el sector.</p>
+        </div>
+      </div>
+      
+      <div class="benefit-item" data-animate="slide-right" data-delay="0.4">
+        <div class="benefit-icon">✓</div>
+        <div class="benefit-content">
+          <h4>Integración Tecnológica</h4>
+          <p>La Jungla Tech posiciona el ecosistema en el futuro del HealthTech con IA.</p>
+        </div>
+      </div>
+      
+      <div class="benefit-item" data-animate="slide-right" data-delay="0.5">
+        <div class="benefit-icon">✓</div>
+        <div class="benefit-content">
+          <h4>Escalabilidad Probada</h4>
+          <p>Modelo replicable con franquicias y expansión digital ya validada.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="quote-box" data-animate="fade-in">
+      <div class="quote-icon">❝</div>
+      <blockquote>"Hoy inviertes en músculo, mañana en inteligencia artificial"</blockquote>
+      <cite>— Carlos Suárez, CEO & Fundador de La Jungla</cite>
+    </div>
+    
+    <div class="cta-box" data-animate="fade-up" data-delay="0.2">
+      <h3>¿Listo para Formar Parte del Ecosistema?</h3>
+      <p>Únete a los inversores que están construyendo el futuro del fitness y la salud preventiva</p>
+      <a href="#form" class="btn-cta-primary">Solicitar Reunión Confidencial</a>
+    </div>
+  </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA: ¿Listo para Invertir en el Futuro del Fitness? -->
+    <div class="cta-section">
+      <h3>¿Listo para Invertir en el Futuro del Fitness?</h3>
+      <p>Agenda tu reunión confidencial con Carlos Suárez y descubre los detalles exclusivos</p>
+      <button class="cta-button" onclick="scrollToForm()">
+        <span class="cta-button-icon">🚀</span>
+        <span>Solicitar Reunión Ahora</span>
+        <span class="cta-button-icon">→</span>
+      </button>
+    </div>
+
+    <!-- Sección: Elige Tu Oportunidad -->
+    <div class="accordion-section" id="investments">
+      <div class="accordion-header">
+        <div class="accordion-title-wrapper">
+          <div class="accordion-icon">💰</div>
+          <div class="accordion-title-content">
+            <h2>Elige Tu Oportunidad</h2>
+            <p class="accordion-subtitle">Opciones de inversión disponibles</p>
+          </div>
+        </div>
+        <div class="accordion-toggle">
+          <span class="accordion-toggle-icon">+</span>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+  <div class="container">
+    <h2 class="section-title" data-animate="fade-up">Elige Tu Oportunidad de Inversión</h2>
+    <p class="section-subtitle" data-animate="fade-up" data-delay="0.1">Cuatro verticales de inversión con diferentes perfiles de riesgo y retorno</p>
+    
+    <div class="closing-banner" data-animate="fade-up" data-delay="0.2">
+      <div class="closing-content">
+        <div class="closing-icon">⏰</div>
+        <div class="closing-text">
+          <h3>Cierre de Ronda: 15 de Diciembre 2025</h3>
+          <p>Después de esta fecha, la ronda se cierra. Plazas limitadas a 15 inversores estratégicos.</p>
+        </div>
+        <div class="countdown">
+          <div class="countdown-item">
+            <span class="countdown-value" id="days">0</span>
+            <span class="countdown-label">Días</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="hours">0</span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="minutes">0</span>
+            <span class="countdown-label">Minutos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="investment-grid">
+      <div class="investment-card glass" data-animate="fade-up" data-delay="0.3">
+        <div class="card-glow"></div>
+        <div class="card-badge sold">60% VENDIDO</div>
+        <div class="card-icon-3d">
+          <span class="icon-emoji">💪</span>
+          <div class="icon-shadow"></div>
+        </div>
+        <h3 class="card-title">Centros Abiertos</h3>
+        <div class="investment-amount">
+          <span class="amount-label">Inversión Mínima</span>
+          <span class="amount-value">20.000€</span>
+        </div>
+        <div class="model-tag">
+          <span class="tag-icon">⚡</span>
+          <span>Rentable y Consolidado</span>
+        </div>
+        <div class="risk-indicator low">
+          <span class="risk-label">Riesgo</span>
+          <div class="risk-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="risk-text">Bajo</span>
+        </div>
+        <ul class="benefits-list">
+          <li><span class="check-icon">✓</span> Modelo probado desde 2017</li>
+          <li><span class="check-icon">✓</span> Gestión 100% pasiva</li>
+          <li><span class="check-icon">✓</span> Comunidad consolidada</li>
+          <li><span class="check-icon">✓</span> Cash flow positivo</li>
+        </ul>
+        <button class="btn-glass" onclick="scrollToForm()">
+          <span>Solicitar Información</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+      
+      <div class="investment-card glass" data-animate="fade-up" data-delay="0.4">
+        <div class="card-glow"></div>
+        <div class="card-badge available">DISPONIBLE</div>
+        <div class="card-icon-3d">
+          <span class="icon-emoji">🏢</span>
+          <div class="icon-shadow"></div>
+        </div>
+        <h3 class="card-title">Franquicias Nuevas</h3>
+        <div class="investment-amount">
+          <span class="amount-label">Inversión Mínima</span>
+          <span class="amount-value">30.000€</span>
+        </div>
+        <div class="model-tag">
+          <span class="tag-icon">🚀</span>
+          <span>Escalable y Dinámico</span>
+        </div>
+        <div class="risk-indicator medium">
+          <span class="risk-label">Riesgo</span>
+          <div class="risk-dots">
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="risk-text">Medio</span>
+        </div>
+        <ul class="benefits-list">
+          <li><span class="check-icon">✓</span> Expansión rápida</li>
+          <li><span class="check-icon">✓</span> Alto potencial de crecimiento</li>
+          <li><span class="check-icon">✓</span> Modelo replicable</li>
+          <li><span class="check-icon">✓</span> Soporte corporativo completo</li>
+        </ul>
+        <button class="btn-glass" onclick="scrollToForm()">
+          <span>Solicitar Información</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+      
+      <div class="investment-card glass" data-animate="fade-up" data-delay="0.5">
+        <div class="card-glow"></div>
+        <div class="card-badge coming">ENERO 2026</div>
+        <div class="card-icon-3d">
+          <span class="icon-emoji">🎓</span>
+          <div class="icon-shadow"></div>
+        </div>
+        <h3 class="card-title">La Jungla Academy</h3>
+        <div class="investment-amount">
+          <span class="amount-label">Inversión Mínima</span>
+          <span class="amount-value">25.000€</span>
+        </div>
+        <div class="model-tag">
+          <span class="tag-icon">💡</span>
+          <span>Educación + Empleo</span>
+        </div>
+        <div class="risk-indicator medium">
+          <span class="risk-label">Riesgo</span>
+          <div class="risk-dots">
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="risk-text">Medio</span>
+        </div>
+        <ul class="benefits-list">
+          <li><span class="check-icon">✓</span> Educación de calidad</li>
+          <li><span class="check-icon">✓</span> 87% inserción laboral</li>
+          <li><span class="check-icon">✓</span> Impacto social medible</li>
+          <li><span class="check-icon">✓</span> Modelo B2B + B2C</li>
+        </ul>
+        <button class="btn-glass disabled" disabled>
+          <span>Próximamente</span>
+          <span class="btn-arrow">⏳</span>
+        </button>
+      </div>
+      
+      <div class="investment-card glass premium-card" data-animate="fade-up" data-delay="0.6">
+        <div class="card-glow premium-glow"></div>
+        <div class="card-badge premium">SOLO PREMIUM</div>
+        <div class="card-icon-3d">
+          <span class="icon-emoji">🤖</span>
+          <div class="icon-shadow"></div>
+        </div>
+        <h3 class="card-title">La Jungla Tech</h3>
+        <div class="investment-amount">
+          <span class="amount-label">Inversión Mínima</span>
+          <span class="amount-value">50.000€</span>
+        </div>
+        <div class="model-tag premium-tag">
+          <span class="tag-icon">🔬</span>
+          <span>HealthTech + IA</span>
+        </div>
+        <div class="risk-indicator high">
+          <span class="risk-label">Riesgo</span>
+          <div class="risk-dots">
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+            <span class="dot active"></span>
+          </div>
+          <span class="risk-text">Alto</span>
+        </div>
+        <ul class="benefits-list">
+          <li><span class="check-icon">✓</span> Futuro tecnológico</li>
+          <li><span class="check-icon">✓</span> Escalabilidad IA exponencial</li>
+          <li><span class="check-icon">✓</span> Disrupción del sector salud</li>
+          <li><span class="check-icon">✓</span> Potencial de exit alto</li>
+        </ul>
+        <button class="btn-glass premium-btn" onclick="scrollToForm()">
+          <span>Solicitar Información</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección: Gestión Empresarial -->
+    <div class="accordion-section" id="structure">
+      <div class="accordion-header">
+        <div class="accordion-title-wrapper">
+          <div class="accordion-icon">📊</div>
+          <div class="accordion-title-content">
+            <h2>Gestión Empresarial</h2>
+            <p class="accordion-subtitle">Estructura profesional y organigrama</p>
+          </div>
+        </div>
+        <div class="accordion-toggle">
+          <span class="accordion-toggle-icon">+</span>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+  <div class="container">
+    <h2 class="section-title" data-animate="fade-up">Una Empresa Seria con Gestión Profesional</h2>
+    <p class="section-subtitle" data-animate="fade-up" data-delay="0.1">Detrás del ecosistema hay un equipo directivo experimentado y comprometido</p>
+    
+    <div class="corporate-values">
+      <h3 class="subsection-title" data-animate="fade-up">Nuestros Valores Corporativos</h3>
+      <div class="values-grid">
+        <div class="value-card" data-animate="scale-in">
+          <div class="value-icon">⚡</div>
+          <h4>Excelencia Operativa</h4>
+          <p>Estándares profesionales en cada proceso. Calidad medible y consistente en todas las operaciones.</p>
+        </div>
+        <div class="value-card" data-animate="scale-in" data-delay="0.1">
+          <div class="value-icon">📊</div>
+          <h4>Transparencia Total</h4>
+          <p>Dashboard en tiempo real para inversores. Acceso completo a métricas y resultados financieros.</p>
+        </div>
+        <div class="value-card" data-animate="scale-in" data-delay="0.2">
+          <div class="value-icon">🔬</div>
+          <h4>Innovación Tecnológica</h4>
+          <p>IA aplicada a medicina preventiva. Lideramos la transformación digital del sector fitness.</p>
+        </div>
+        <div class="value-card" data-animate="scale-in" data-delay="0.3">
+          <div class="value-icon">💼</div>
+          <h4>Gestión Profesional</h4>
+          <p>Equipo directivo experimentado. Procesos corporativos sólidos y escalables.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="org-chart-modern">
+      <h3 class="subsection-title" data-animate="fade-up">Estructura Organizativa</h3>
+      <p class="org-subtitle" data-animate="fade-up" data-delay="0.1">Equipo directivo profesional con departamentos especializados</p>
+      
+      <div class="org-tree">
+        <!-- CEO -->
+        <div class="org-node ceo-node" data-animate="fade-in">
+          <div class="node-content">
+            <div class="node-icon">🎯</div>
+            <h4>Dirección General</h4>
+            <p>CEO & Fundador</p>
+          </div>
+        </div>
+        
+        <!-- Connector Lines -->
+        <div class="org-branches">
+          <svg class="branches-svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <!-- Línea vertical desde CEO -->
+            <line x1="500" y1="0" x2="500" y2="50" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <!-- Línea horizontal principal -->
+            <line x1="60" y1="50" x2="940" y2="50" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <!-- Líneas verticales a cada departamento (8) -->
+            <line x1="60" y1="50" x2="60" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <line x1="185" y1="50" x2="185" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <line x1="310" y1="50" x2="310" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <line x1="435" y1="50" x2="435" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <line x1="565" y1="50" x2="565" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <line x1="690" y1="50" x2="690" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <line x1="815" y1="50" x2="815" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+            <line x1="940" y1="50" x2="940" y2="100" stroke="rgba(180, 255, 0, 0.5)" stroke-width="2"/>
+          </svg>
+        </div>
+        
+        <!-- Departments -->
+        <div class="org-departments">
+          <div class="org-node dept-node" data-animate="scale-in">
+            <div class="node-content">
+              <div class="node-icon">⚙️</div>
+              <h5>Operaciones</h5>
+              <span class="node-badge">Director</span>
+            </div>
+          </div>
+          
+          <div class="org-node dept-node" data-animate="scale-in" data-delay="0.05">
+            <div class="node-content">
+              <div class="node-icon">👥</div>
+              <h5>RRHH</h5>
+              <span class="node-badge">Director</span>
+            </div>
+          </div>
+          
+          <div class="org-node dept-node" data-animate="scale-in" data-delay="0.1">
+            <div class="node-content">
+              <div class="node-icon">📊</div>
+              <h5>Marketing</h5>
+              <span class="node-badge">Director</span>
+            </div>
+          </div>
+          
+          <div class="org-node dept-node" data-animate="scale-in" data-delay="0.15">
+            <div class="node-content">
+              <div class="node-icon">💻</div>
+              <h5>Digital</h5>
+              <span class="node-badge">Directores</span>
+            </div>
+          </div>
+          
+          <div class="org-node dept-node" data-animate="scale-in" data-delay="0.2">
+            <div class="node-content">
+              <div class="node-icon">🎉</div>
+              <h5>Eventos</h5>
+              <span class="node-badge">Director</span>
+            </div>
+          </div>
+          
+          <div class="org-node dept-node" data-animate="scale-in" data-delay="0.25">
+            <div class="node-content">
+              <div class="node-icon">🔧</div>
+              <h5>Mantenimiento</h5>
+              <span class="node-badge">Director</span>
+            </div>
+          </div>
+          
+          <div class="org-node dept-node" data-animate="scale-in" data-delay="0.3">
+            <div class="node-content">
+              <div class="node-icon">📦</div>
+              <h5>Logística</h5>
+              <span class="node-badge">Director</span>
+            </div>
+          </div>
+          
+          <div class="org-node dept-node" data-animate="scale-in" data-delay="0.35">
+            <div class="node-content">
+              <div class="node-icon">💰</div>
+              <h5>Finanzas</h5>
+              <span class="node-badge">Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="management-grid">
+      <h3 class="subsection-title" data-animate="fade-up">Gestión Profesional y Transparente</h3>
+      <div class="management-features">
+        <div class="feature-card-visual" data-animate="fade-up">
+          <div class="feature-image">
+            <img src="assets/images/dashboard/reuniones.png" alt="Sistema de Reuniones" loading="lazy">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <div class="feature-icon">📅</div>
+            <h4>Reporting Quincenal</h4>
+            <p>Cada departamento reporta KPIs cada 15 días al comité directivo para toma de decisiones ágil.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card-visual" data-animate="fade-up" data-delay="0.1">
+          <div class="feature-image">
+            <img src="assets/images/dashboard/kpis.png" alt="Dashboard Interactivo" loading="lazy">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <div class="feature-icon">📊</div>
+            <h4>Dashboard Interactivo</h4>
+            <p>Sistema ejecutivo inteligente con IA: Carlos, Benito y Vicente. Métricas en tiempo real.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card-visual" data-animate="fade-up" data-delay="0.2">
+          <div class="feature-image">
+            <img src="assets/images/instalaciones/render8.png" alt="Tecnología" loading="lazy">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <div class="feature-icon">🔧</div>
+            <h4>Stack Tecnológico Moderno</h4>
+            <p>Hubspot CRM, Factorial RRHH, WODBUSTER, Google Workspace, Asana para gestión.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card-visual" data-animate="fade-up" data-delay="0.3">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Comité Ejecutivo" loading="lazy">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <div class="feature-icon">🤝</div>
+            <h4>Comité Semanal</h4>
+            <p>Reuniones semanales de dirección para alineación estratégica y resolución rápida.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card-visual" data-animate="fade-up" data-delay="0.4">
+          <div class="feature-image">
+            <img src="assets/images/equipo/Vicente.jpeg" alt="Auditorías Internas" loading="lazy">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <div class="feature-icon">🛡️</div>
+            <h4>Auditorías Internas</h4>
+            <p>Sistema de auditorías periódicas para garantizar calidad y cumplimiento.</p>
+          </div>
+        </div>
+        
+        <div class="feature-card-visual" data-animate="fade-up" data-delay="0.5">
+          <div class="feature-image">
+            <img src="assets/images/instalaciones/integracion_tech.png" alt="Mejora Continua" loading="lazy">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <div class="feature-icon">📈</div>
+            <h4>Mejora Continua</h4>
+            <p>Cultura de innovación y optimización constante en todos los procesos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección: Transparencia Total -->
+    <div class="accordion-section" id="transparency">
+      <div class="accordion-header">
+        <div class="accordion-title-wrapper">
+          <div class="accordion-icon">🔒</div>
+          <div class="accordion-title-content">
+            <h2>Transparencia Total</h2>
+            <p class="accordion-subtitle">Dashboard y compromiso con inversores</p>
+          </div>
+        </div>
+        <div class="accordion-toggle">
+          <span class="accordion-toggle-icon">+</span>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+  <div class="container">
+    <h2 class="section-title" data-animate="fade-up">Transparencia Total: Tu Dashboard de Inversión</h2>
+    <p class="section-subtitle" data-animate="fade-up" data-delay="0.1">Acceso 24/7 a un panel de control profesional donde monitoreas tu inversión en tiempo real</p>
+    
+    <h3 class="features-title" data-animate="fade-up">¿Qué Verás en Tu Dashboard?</h3>
+    
+    <div class="dashboard-circle" data-animate="fade-in">
+      <div class="circle-center">
+        <div class="center-icon">📊</div>
+        <h4>Tu Dashboard</h4>
+        <p>Acceso 24/7</p>
+      </div>
+      
+      <div class="circle-item" data-step="1" data-animate="scale-in">
+        <div class="circle-number">01</div>
+        <h5>Estado de Inversión</h5>
+        <p>Valor actual, retorno acumulado y proyecciones</p>
+      </div>
+      
+      <div class="circle-item" data-step="2" data-animate="scale-in" data-delay="0.1">
+        <div class="circle-number">02</div>
+        <h5>KPIs de Negocio</h5>
+        <p>Usuarios, retención, NPS, MRR, EBITDA</p>
+      </div>
+      
+      <div class="circle-item" data-step="3" data-animate="scale-in" data-delay="0.2">
+        <div class="circle-number">03</div>
+        <h5>Reportes Financieros</h5>
+        <p>Estados, flujo de caja, balance general</p>
+      </div>
+      
+      <div class="circle-item" data-step="4" data-animate="scale-in" data-delay="0.3">
+        <div class="circle-number">04</div>
+        <h5>Documentos Legales</h5>
+        <p>Acuerdos, certificados, regulación</p>
+      </div>
+      
+      <div class="circle-item" data-step="5" data-animate="scale-in" data-delay="0.4">
+        <div class="circle-number">05</div>
+        <h5>Comunicaciones</h5>
+        <p>Mensajes directos y actualizaciones</p>
+      </div>
+      
+      <div class="circle-item" data-step="6" data-animate="scale-in" data-delay="0.5">
+        <div class="circle-number">06</div>
+        <h5>Histórico Completo</h5>
+        <p>Reportes y auditorías descargables</p>
+      </div>
+      
+      <!-- SVG Lines connecting to center -->
+      <svg class="circle-connections" viewBox="0 0 800 800">
+        <line x1="400" y1="400" x2="400" y2="100" stroke="rgba(180, 255, 0, 0.3)" stroke-width="2"/>
+        <line x1="400" y1="400" x2="650" y2="200" stroke="rgba(180, 255, 0, 0.3)" stroke-width="2"/>
+        <line x1="400" y1="400" x2="650" y2="600" stroke="rgba(180, 255, 0, 0.3)" stroke-width="2"/>
+        <line x1="400" y1="400" x2="400" y2="700" stroke="rgba(180, 255, 0, 0.3)" stroke-width="2"/>
+        <line x1="400" y1="400" x2="150" y2="600" stroke="rgba(180, 255, 0, 0.3)" stroke-width="2"/>
+        <line x1="400" y1="400" x2="150" y2="200" stroke="rgba(180, 255, 0, 0.3)" stroke-width="2"/>
+      </svg>
+    </div>
+    
+    <div class="mobile-mockup-section" data-animate="fade-up" data-delay="0.6">
+      <h3 class="mockup-title">Tu Inversión en Tu Bolsillo</h3>
+      <p class="mockup-subtitle">Monitorea tus KPIs desde cualquier lugar, en tiempo real</p>
+      
+      <div class="phone-mockup">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-header">
+              <div class="phone-time">9:41</div>
+              <div class="phone-icons">
+                <span>📶</span>
+                <span>🔋</span>
+              </div>
+            </div>
+            <div class="phone-content">
+              <div class="phone-logo">🌿 La Jungla</div>
+              <div class="phone-welcome">Tu Inversión</div>
+              
+              <div class="phone-card main-card">
+                <div class="card-label">Valor Actual</div>
+                <div class="card-big-value">€62.500</div>
+                <div class="card-change positive">+25% (€12.500)</div>
+              </div>
+              
+              <div class="phone-kpis">
+                <div class="phone-kpi">
+                  <div class="kpi-icon">👥</div>
+                  <div class="kpi-info">
+                    <div class="kpi-label">Usuarios</div>
+                    <div class="kpi-value">12.450</div>
+                  </div>
+                </div>
+                <div class="phone-kpi">
+                  <div class="kpi-icon">⭐</div>
+                  <div class="kpi-info">
+                    <div class="kpi-label">NPS</div>
+                    <div class="kpi-value">72</div>
+                  </div>
+                </div>
+                <div class="phone-kpi">
+                  <div class="kpi-icon">💰</div>
+                  <div class="kpi-info">
+                    <div class="kpi-label">MRR</div>
+                    <div class="kpi-value">€125K</div>
+                  </div>
+                </div>
+                <div class="phone-kpi">
+                  <div class="kpi-icon">📈</div>
+                  <div class="kpi-info">
+                    <div class="kpi-label">EBITDA</div>
+                    <div class="kpi-value">€45K</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="phone-badge">
+                <span class="badge-dot"></span>
+                Actualizado hace 2 min
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title white" data-animate="fade-up">Nuestro Compromiso Contigo</h2>
+    <p class="section-subtitle white" data-animate="fade-up" data-delay="0.1">Eliminamos el riesgo asumiendo responsabilidad total sobre la gestión</p>
+    
+    <div class="commitment-grid">
+      <div class="commitment-card" data-animate="scale-in">
+        <div class="commitment-icon">📋</div>
+        <h4>Transparencia Radical</h4>
+        <p>Reportes financieros trimestrales obligatorios. KPI dashboard 24/7 accesible para todos los inversores.</p>
+      </div>
+      
+      <div class="commitment-card" data-animate="scale-in" data-delay="0.1">
+        <div class="commitment-icon">🗳️</div>
+        <h4>Gobernanza Clara</h4>
+        <p>Voz y voto en decisiones estratégicas importantes según tu porcentaje de participación.</p>
+      </div>
+      
+      <div class="commitment-card" data-animate="scale-in" data-delay="0.2">
+        <div class="commitment-icon">💰</div>
+        <h4>Exit Strategy Definida</h4>
+        <p>Opciones de liquidez cada 3 años según crecimiento y valoración del ecosistema.</p>
+      </div>
+      
+      <div class="commitment-card" data-animate="scale-in" data-delay="0.3">
+        <div class="commitment-icon">🤝</div>
+        <h4>Alineación de Incentivos</h4>
+        <p>El equipo directivo también invierte su propio capital. Todos remamos en la misma dirección.</p>
+      </div>
+      
+      <div class="commitment-card" data-animate="scale-in" data-delay="0.4">
+        <div class="commitment-icon">⚖️</div>
+        <h4>Protección Legal</h4>
+        <p>Contratos revisados por despacho especializado en inversión startup y venture capital.</p>
+      </div>
+      
+      <div class="commitment-card" data-animate="scale-in" data-delay="0.5">
+        <div class="commitment-icon">🔐</div>
+        <h4>Cumplimiento Regulatorio</h4>
+        <p>Registro Mercantil, RGPD, auditorías internas periódicas y seguros de responsabilidad civil.</p>
+      </div>
+    </div>
+  </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección: Tu Camino a la Inversión -->
+    <div class="accordion-section" id="process">
+      <div class="accordion-header">
+        <div class="accordion-title-wrapper">
+          <div class="accordion-icon">🚀</div>
+          <div class="accordion-title-content">
+            <h2>Tu Camino a la Inversión</h2>
+            <p class="accordion-subtitle">Proceso paso a paso</p>
+          </div>
+        </div>
+        <div class="accordion-toggle">
+          <span class="accordion-toggle-icon">+</span>
+        </div>
+      </div>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+  <div class="container">
+    <h2 class="section-title" data-animate="fade-up">Tu Camino hacia la Inversión Junglera</h2>
+    <p class="section-subtitle" data-animate="fade-up" data-delay="0.1">4 pasos simples, transparentes y profesionales</p>
+    
+    <div class="timeline">
+      <div class="timeline-item" data-animate="fade-right">
+        <div class="timeline-marker">
+          <span class="step-number">1</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Manifiesta tu Interés</h3>
+          <p>Completa el formulario de contacto. Inversión mínima: 20.000€. Te responderemos en menos de 48 horas.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-animate="fade-right" data-delay="0.2">
+        <div class="timeline-marker">
+          <span class="step-number">2</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Reunión Confidencial</h3>
+          <p>Sesión personal con Carlos Suárez para conocer detalles del modelo, proyecciones y resolver todas tus dudas.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-animate="fade-right" data-delay="0.4">
+        <div class="timeline-marker">
+          <span class="step-number">3</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Acceso a Documentación</h3>
+          <p>Data room completo con información financiera detallada, legal, proyecciones y due diligence.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-animate="fade-right" data-delay="0.6">
+        <div class="timeline-marker">
+          <span class="step-number">4</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Formalización</h3>
+          <p>Acuerdo firmado, transferencia realizada y entrada oficial al ecosistema de inversores La Jungla.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA: Da el Primer Paso Hacia Tu Inversión -->
+    <div class="cta-section">
+      <h3>Da el Primer Paso Hacia Tu Inversión</h3>
+      <p>Completa el formulario y recibe información exclusiva en menos de 48 horas</p>
+      <button class="cta-button" onclick="scrollToForm()">
+        <span class="cta-button-icon">🚀</span>
+        <span>Solicitar Información Confidencial</span>
+        <span class="cta-button-icon">→</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+<!-- FIN ACCORDION WRAPPER -->
+
+  <div class="container">
+    <h2 class="section-title" data-animate="fade-up">Lo Que Dicen Nuestros Jungler@s</h2>
+    <p class="section-subtitle" data-animate="fade-up" data-delay="0.1">Testimonios reales de nuestra comunidad</p>
+    
+    <div class="testimonials-carousel">
+      <div class="testimonial-card active">
+        <div class="testimonial-quote">❝</div>
+        <p class="testimonial-text">"Es más que un sitio donde ir a entrenar. El equipo es profesional y cercano, consiguen que aprendas y sientas que el trabajo está bien hecho. La comunidad es increíble."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👤</div>
+          <div class="author-info">
+            <div class="author-name">Reyes M.</div>
+            <div class="author-meta">4 años en La Jungla</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-quote">❝</div>
+        <p class="testimonial-text">"Nunca había durado mucho entrenando hasta que conocí su método. He mejorado en salud y calidad de vida. Los mejores profesionales y gracias a sus fiestas somos una gran familia."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👤</div>
+          <div class="author-info">
+            <div class="author-name">Ana Espinosa</div>
+            <div class="author-meta">2 años en La Jungla</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-quote">❝</div>
+        <p class="testimonial-text">"El método ha conseguido que todo lo que molesta de entrenar desaparezca. No hay que pensar qué toca cada día, estás asesorado por profesionales impresionantes que te motivan constantemente."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👤</div>
+          <div class="author-info">
+            <div class="author-name">Angel SVQ</div>
+            <div class="author-meta">3 años en La Jungla</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-controls">
+      <button class="carousel-btn prev" onclick="prevTestimonial()">←</button>
+      <div class="carousel-dots">
+        <span class="dot active" onclick="goToTestimonial(0)"></span>
+        <span class="dot" onclick="goToTestimonial(1)"></span>
+        <span class="dot" onclick="goToTestimonial(2)"></span>
+      </div>
+      <button class="carousel-btn next" onclick="nextTestimonial()">→</button>
+    </div>
+  </div>
+</section>
+  <div class="container">
+    <h2 class="section-title" data-animate="fade-up">Solicita tu Reunión Confidencial</h2>
+    <p class="section-subtitle" data-animate="fade-up" data-delay="0.1">Completa el formulario y te contactaremos en menos de 48 horas</p>
+    
+    <div class="form-wrapper glass-form" data-animate="fade-up" data-delay="0.2">
+      <div class="form-glow"></div>
+      <form class="investment-form" id="investmentForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">
+              <span class="label-icon">👤</span>
+              Nombre completo *
+            </label>
+            <input type="text" id="fullName" name="fullName" placeholder="Tu nombre completo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">
+              <span class="label-icon">📧</span>
+              Email *
+            </label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">
+              <span class="label-icon">📱</span>
+              Teléfono *
+            </label>
+            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="source">
+              <span class="label-icon">🔍</span>
+              ¿Cómo nos conociste? *
+            </label>
+            <select id="source" name="source" required>
+              <option value="">Selecciona una opción</option>
+              <option value="instagram">Instagram</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="junglero">Soy Jungler@</option>
+              <option value="recommendation">Recomendación</option>
+              <option value="google">Google</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>
+            <span class="label-icon">💰</span>
+            ¿Cuál es tu interés de inversión? *
+          </label>
+          <div class="radio-group-modern">
+            <label class="radio-card">
+              <input type="radio" name="investment" value="20k-50k" required>
+              <span class="radio-content">
+                <span class="radio-amount">20K - 50K€</span>
+                <span class="radio-check">✓</span>
+              </span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="investment" value="50k-100k">
+              <span class="radio-content">
+                <span class="radio-amount">50K - 100K€</span>
+                <span class="radio-check">✓</span>
+              </span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="investment" value="100k+">
+              <span class="radio-content">
+                <span class="radio-amount">+100K€</span>
+                <span class="radio-check">✓</span>
+              </span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">
+            <span class="label-icon">💬</span>
+            Mensaje (opcional)
+          </label>
+          <textarea id="message" name="message" rows="4" placeholder="Cuéntanos más sobre tu interés en invertir con La Jungla..."></textarea>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <label class="checkbox-modern">
+            <input type="checkbox" name="privacy" required>
+            <span class="checkbox-box">
+              <span class="checkbox-check">✓</span>
+            </span>
+            <span class="checkbox-text">Acepto la <a href="#" target="_blank">Política de Privacidad</a> y recibir información comercial</span>
+          </label>
+        </div>
+        
+        <button type="submit" class="btn-glass-submit">
+          <span class="btn-icon">🚀</span>
+          <span class="btn-text">Solicitar Reunión Confidencial</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        
+        <p class="form-note">
+          <span class="note-icon">🔒</span>
+          Tus datos están seguros. Respuesta en menos de 48h.
+        </p>
+      </form>
+      
+      <div class="form-message" id="formMessage" style="display:none;">
+        <div class="message-icon">✓</div>
+        <h3>¡Gracias por tu interés!</h3>
+        <p>En breve te contactaremos desde el equipo de ventas para agendar tu reunión confidencial.</p>
+        <p class="message-highlight">📧 Revisa tu email - Te hemos enviado una confirmación</p>
+        <p class="message-note">Tiempo de respuesta: menos de 48 horas laborables</p>
+      
+      <div class="form-info">
+        <div class="info-item">
+          <div class="info-icon">🔒</div>
+          <div class="info-content">
+            <h4>Confidencialidad Garantizada</h4>
+            <p>Toda la información compartida es estrictamente confidencial</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">⚡</div>
+          <div class="info-content">
+            <h4>Respuesta Rápida</h4>
+            <p>Te contactamos en menos de 48 horas laborables</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🤝</div>
+          <div class="info-content">
+            <h4>Sin Compromiso</h4>
+            <p>La reunión es informativa, sin obligación de inversión</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <div class="footer-logo">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">La Jungla Workout</span>
+      </div>
+      <p class="footer-description">El ecosistema fitness más innovador de España. Transformando vidas desde 2017.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/lajungla" target="_blank" aria-label="Instagram">📷</a>
+        <a href="https://facebook.com/lajungla" target="_blank" aria-label="Facebook">📘</a>
+        <a href="https://linkedin.com/company/lajungla" target="_blank" aria-label="LinkedIn">💼</a>
+        <a href="https://youtube.com/lajungla" target="_blank" aria-label="YouTube">📺</a>
+      </div>
+    </div>
+    
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <ul class="footer-links">
+        <li><strong>Carlos Suárez</strong> - CEO</li>
+        <li><a href="mailto:csuarezparra@gmail.com">csuarezparra@gmail.com</a></li>
+        <li><a href="tel:+34605828579">+34 605 828 579</a></li>
+        <li>📍 Andalucía, España</li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h4>Ecosistema</h4>
+      <ul class="footer-links">
+        <li><a href="#ecosystem">Centros Físicos</a></li>
+        <li><a href="#ecosystem">La Jungla Academy</a></li>
+        <li><a href="#ecosystem">La Jungla Tech</a></li>
+        <li><a href="#transparency">Dashboard Inversores</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <ul class="footer-links">
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Aviso Legal</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 La Jungla Workout. Todos los derechos reservados.</p>
+    <p class="footer-disclaimer">Esta es una oportunidad de inversión privada. No constituye una oferta pública de valores. Solo para inversores cualificados.</p>
+</footer>
+<!-- Supabase Client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Scripts de la app -->
+<script src="js/main.js"></script>
+<script src="js/form-validation.js"></script>
+<script src="js/analytics.js"></script>
+
+<!-- Form Handler con Supabase -->
+<script src="js/form-handler.js"></script>
+
+<!-- Accordion System -->
+<script src="js/accordion.js"></script>
+</body>
+</html>

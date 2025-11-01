@@ -1,0 +1,370 @@
+/* Modern Accordion System - Ultra Impactante */
+
+.accordion-wrapper {
+  background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.85) 100%),
+    url('../assets/images/instalaciones/sevilla_centro_antigua_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 0;
+  position: relative;
+}
+
+.accordion-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.accordion-section {
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(180, 255, 0, 0.3);
+  border-radius: 20px;
+  padding: 28px 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(180, 255, 0, 0.15) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 400ms;
+  pointer-events: none;
+}
+
+.accordion-header:hover::before {
+  opacity: 1;
+}
+
+.accordion-header:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(180, 255, 0, 0.3);
+}
+
+.accordion-header.active {
+  border-color: var(--primary-green);
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 8px 32px rgba(180, 255, 0, 0.4);
+}
+
+.accordion-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.accordion-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(180, 255, 0, 0.2), rgba(180, 255, 0, 0.1));
+  border: 2px solid rgba(180, 255, 0, 0.4);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: all 400ms;
+  position: relative;
+}
+
+.accordion-icon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--primary-green), transparent);
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 400ms;
+  z-index: -1;
+}
+
+.accordion-header:hover .accordion-icon::after,
+.accordion-header.active .accordion-icon::after {
+  opacity: 0.6;
+}
+
+.accordion-header.active .accordion-icon {
+  background: var(--primary-green);
+  color: #000;
+  transform: scale(1.1) rotate(360deg);
+  box-shadow: 0 0 30px rgba(180, 255, 0, 0.6);
+}
+
+.accordion-title-content h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 8px 0;
+  transition: color 300ms;
+}
+
+.accordion-header:hover .accordion-title-content h2,
+.accordion-header.active .accordion-title-content h2 {
+  color: var(--primary-green);
+}
+
+.accordion-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  transition: color 300ms;
+}
+
+.accordion-header:hover .accordion-subtitle,
+.accordion-header.active .accordion-subtitle {
+  color: rgba(180, 255, 0, 0.8);
+}
+
+.accordion-toggle {
+  width: 48px;
+  height: 48px;
+  background: rgba(180, 255, 0, 0.1);
+  border: 2px solid rgba(180, 255, 0, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 400ms;
+  position: relative;
+}
+
+.accordion-toggle-icon {
+  font-size: 24px;
+  color: var(--primary-green);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.accordion-header.active .accordion-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-header:hover .accordion-toggle {
+  background: rgba(180, 255, 0, 0.2);
+  border-color: var(--primary-green);
+  transform: scale(1.1);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.active {
+  max-height: 5000px;
+}
+
+.accordion-content-inner {
+  padding: 40px 32px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.accordion-content.active .accordion-content-inner {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 200ms;
+}
+
+/* CTA Section Styles */
+.cta-section {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(180, 255, 0, 0.4);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  background: radial-gradient(circle, rgba(180, 255, 0, 0.15) 0%, transparent 60%);
+  animation: pulse-cta 4s ease-in-out infinite;
+}
+
+@keyframes pulse-cta {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.cta-section h3 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--primary-green);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 30px rgba(180, 255, 0, 0.5);
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--primary-green);
+  color: #000;
+  padding: 20px 48px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 400ms;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.cta-button:hover::before {
+  opacity: 1;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 48px rgba(180, 255, 0, 0.6);
+}
+
+.cta-button-icon {
+  font-size: 24px;
+  transition: transform 400ms;
+}
+
+.cta-button:hover .cta-button-icon {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accordion-header {
+    padding: 20px 20px;
+  }
+  
+  .accordion-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+  
+  .accordion-title-content h2 {
+    font-size: 20px;
+  }
+  
+  .accordion-subtitle {
+    font-size: 12px;
+  }
+  
+  .accordion-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .accordion-content-inner {
+    padding: 24px 20px;
+  }
+  
+  .cta-section {
+    padding: 40px 24px;
+  }
+  
+  .cta-section h3 {
+    font-size: 28px;
+  }
+  
+  .cta-section p {
+    font-size: 16px;
+  }
+  
+  .cta-button {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}
+
+/* Particle effects */
+.accordion-header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(180, 255, 0, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 600ms;
+  pointer-events: none;
+}
+
+.accordion-header:active::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0ms;
+}
+
+/* Scroll reveal animation */
+.accordion-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealAccordion 600ms forwards;
+}
+
+@keyframes revealAccordion {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accordion-section:nth-child(1) { animation-delay: 0ms; }
+.accordion-section:nth-child(2) { animation-delay: 100ms; }
+.accordion-section:nth-child(3) { animation-delay: 200ms; }
+.accordion-section:nth-child(4) { animation-delay: 300ms; }
+.accordion-section:nth-child(5) { animation-delay: 400ms; }
+.accordion-section:nth-child(6) { animation-delay: 500ms; }
+.accordion-section:nth-child(7) { animation-delay: 600ms; }
+.accordion-section:nth-child(8) { animation-delay: 700ms; }
