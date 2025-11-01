@@ -11,12 +11,14 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
 .btn-primary:hover { transform: translateY(-4px); }
 .btn-secondary { background: #fff; color: var(--primary-green); border: 2px solid var(--primary-green); }
 
-.header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); border-bottom: 1px solid #EEE; backdrop-filter: blur(10px); }
+.header { position: sticky; top: 0; z-index: 100; background: rgba(30, 30, 30, 0.95); border-bottom: 2px solid rgba(180, 255, 0, 0.3); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
 .header-container { max-width: 1440px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 24px; font-weight: 700; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 40px; width: auto; }
+.logo-text { font-size: 24px; font-weight: 700; color: #fff; display: none; }
 .nav { display: flex; gap: 32px; }
-.nav a { font-size: 14px; color: var(--text-secondary); text-decoration: none; }
-.nav a:hover { color: var(--primary-green); }
+.nav a { font-size: 14px; color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s; }
+.nav a:hover { color: var(--primary-green); text-shadow: 0 0 10px rgba(180, 255, 0, 0.5); }
 .nav-cta { background: var(--primary-green); color: #000 !important; padding: 10px 24px; border-radius: 20px; font-weight: 600; }
 
 .hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; color: #fff; text-align: center; }
