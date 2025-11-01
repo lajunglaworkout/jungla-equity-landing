@@ -90,51 +90,60 @@ html {
   overflow: visible;
 }
 
-/* ADN Junglero - Doble hélice */
+/* ADN Junglero - Doble hélice con barras */
 .accordion-icon::before,
 .accordion-icon::after {
   content: '';
   position: absolute;
-  width: 3px;
+  width: 2.5px;
   height: 50px;
-  border-radius: 3px;
+  background: currentColor;
+  border-radius: 2px;
   transition: all 400ms;
 }
 
 .accordion-icon::before {
-  left: 18px;
-  background: linear-gradient(180deg, 
-    currentColor 0%, 
-    transparent 25%, 
-    currentColor 50%, 
-    transparent 75%, 
-    currentColor 100%);
-  transform: rotate(-15deg);
+  left: 15px;
+  clip-path: polygon(
+    0% 0%, 100% 0%,
+    100% 15%, 0% 15%,
+    0% 35%, 100% 35%,
+    100% 50%, 0% 50%,
+    0% 65%, 100% 65%,
+    100% 85%, 0% 85%,
+    0% 100%, 100% 100%
+  );
+  opacity: 0.8;
 }
 
 .accordion-icon::after {
-  right: 18px;
-  background: linear-gradient(180deg, 
-    transparent 0%, 
-    currentColor 25%, 
-    transparent 50%, 
-    currentColor 75%, 
-    transparent 100%);
-  transform: rotate(15deg);
+  right: 15px;
+  clip-path: polygon(
+    0% 10%, 100% 10%,
+    100% 25%, 0% 25%,
+    0% 40%, 100% 40%,
+    100% 60%, 0% 60%,
+    0% 75%, 100% 75%,
+    100% 90%, 0% 90%
+  );
+  opacity: 0.8;
 }
 
-/* Puntos de conexión del ADN */
+/* Barras horizontales del ADN */
 .accordion-icon {
   background-image: 
-    radial-gradient(circle, currentColor 2px, transparent 2px),
-    radial-gradient(circle, currentColor 2px, transparent 2px),
-    radial-gradient(circle, currentColor 2px, transparent 2px);
-  background-size: 4px 4px;
+    linear-gradient(90deg, currentColor 0%, currentColor 100%),
+    linear-gradient(90deg, currentColor 0%, currentColor 100%),
+    linear-gradient(90deg, currentColor 0%, currentColor 100%),
+    linear-gradient(90deg, currentColor 0%, currentColor 100%);
+  background-size: 28px 2px;
   background-position: 
-    center 10px,
-    center 30px,
-    center 50px;
+    center 12px,
+    center 24px,
+    center 36px,
+    center 48px;
   background-repeat: no-repeat;
+  opacity: 0.6;
 }
 
 /* Degradado progresivo de negro a verde - ADN */
