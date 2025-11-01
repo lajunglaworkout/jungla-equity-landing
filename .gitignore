@@ -29,3 +29,7 @@ backups/*.tar.gz
 # assets/videos/*.mp4
 # assets/images/Equipo/DSC_6093.jpg
 # assets/images/Instalaciones/puerto_centro_*.jpg
+.vercel
+
+# Local Netlify folder
+.netlify
