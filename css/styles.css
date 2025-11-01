@@ -40,7 +40,7 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
 .btn-large { padding: 18px 36px; font-size: 16px; }
 .btn-icon { font-size: 20px; }
 .btn-text { font-weight: 600; }
-.hero-metrics { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
+.hero-metrics { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-bottom: 80px; }
 .metric { display: flex; flex-direction: column; align-items: center; }
 .metric-value { font-size: 42px; font-weight: 800; color: var(--primary-green); line-height: 1; }
 .metric-plus, .metric-percent, .metric-icon { font-size: 24px; color: var(--accent-yellow); margin-top: 4px; }
