@@ -84,66 +84,15 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0;
   transition: all 400ms;
   position: relative;
   overflow: visible;
 }
 
-/* ADN Junglero - Doble hélice con barras */
-.accordion-icon::before,
-.accordion-icon::after {
-  content: '';
-  position: absolute;
-  width: 2.5px;
-  height: 50px;
-  background: currentColor;
-  border-radius: 2px;
+.accordion-icon svg {
+  width: 40px;
+  height: 40px;
   transition: all 400ms;
-}
-
-.accordion-icon::before {
-  left: 15px;
-  clip-path: polygon(
-    0% 0%, 100% 0%,
-    100% 15%, 0% 15%,
-    0% 35%, 100% 35%,
-    100% 50%, 0% 50%,
-    0% 65%, 100% 65%,
-    100% 85%, 0% 85%,
-    0% 100%, 100% 100%
-  );
-  opacity: 0.8;
-}
-
-.accordion-icon::after {
-  right: 15px;
-  clip-path: polygon(
-    0% 10%, 100% 10%,
-    100% 25%, 0% 25%,
-    0% 40%, 100% 40%,
-    100% 60%, 0% 60%,
-    0% 75%, 100% 75%,
-    100% 90%, 0% 90%
-  );
-  opacity: 0.8;
-}
-
-/* Barras horizontales del ADN */
-.accordion-icon {
-  background-image: 
-    linear-gradient(90deg, currentColor 0%, currentColor 100%),
-    linear-gradient(90deg, currentColor 0%, currentColor 100%),
-    linear-gradient(90deg, currentColor 0%, currentColor 100%),
-    linear-gradient(90deg, currentColor 0%, currentColor 100%);
-  background-size: 28px 2px;
-  background-position: 
-    center 12px,
-    center 24px,
-    center 36px,
-    center 48px;
-  background-repeat: no-repeat;
-  opacity: 0.6;
 }
 
 /* Degradado progresivo de negro a verde - ADN */
@@ -172,15 +121,11 @@ html {
 }
 
 /* Animación al hover */
-.accordion-header:hover .accordion-icon::before {
-  transform: rotate(-20deg) scale(1.1);
+.accordion-header:hover .accordion-icon svg {
+  transform: scale(1.1);
 }
 
-.accordion-header:hover .accordion-icon::after {
-  transform: rotate(20deg) scale(1.1);
-}
-
-.accordion-header.active .accordion-icon {
+.accordion-header.active .accordion-icon svg {
   filter: drop-shadow(0 0 8px currentColor);
 }
 
