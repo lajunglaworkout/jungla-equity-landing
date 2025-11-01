@@ -104,8 +104,8 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
     inset 0 1px 0 rgba(255, 230, 0, 0.2);
 }
 .badge-corner { position: absolute; top: 20px; right: 20px; z-index: 10; background: var(--accent-yellow); color: #000; padding: 8px 16px; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
-.pillar-image { position: relative; height: 320px; overflow: hidden; }
-.pillar-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 600ms; }
+.pillar-image { position: relative; min-height: 250px; max-height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.3); }
+.pillar-image img { width: 100%; height: auto; max-height: 400px; object-fit: contain; object-position: center; transition: transform 600ms; }
 .pillar-card:hover .pillar-image img { transform: scale(1.08); }
 .pillar-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 100%); }
 .pillar-overlay-tech { background: linear-gradient(180deg, rgba(180,255,0,0.1) 0%, rgba(0,0,0,0.7) 100%); }
