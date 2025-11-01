@@ -521,9 +521,11 @@ section {
 
 .ecosystem-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
   margin-bottom: 100px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pillar-card {
