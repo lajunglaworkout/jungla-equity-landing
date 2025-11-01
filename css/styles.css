@@ -154,8 +154,8 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
 .pillar-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
 .pillar-stat { 
   background: linear-gradient(135deg, rgba(180, 255, 0, 0.15) 0%, rgba(180, 255, 0, 0.05) 100%);
-  padding: 20px 16px; 
-  border-radius: 16px; 
+  padding: 12px 10px; 
+  border-radius: 12px; 
   text-align: center;
   border: 1px solid rgba(180, 255, 0, 0.3);
   transition: all 300ms;
@@ -184,16 +184,16 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
 }
 .pillar-stat .stat-number { 
   display: block; 
-  font-size: 32px; 
+  font-size: 24px; 
   font-weight: 900; 
   color: #6B9500;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   line-height: 1;
   text-shadow: 0 2px 8px rgba(107, 149, 0, 0.3);
 }
 .pillar-stat .stat-label { 
   display: block; 
-  font-size: 11px; 
+  font-size: 9px; 
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
   text-transform: uppercase;
