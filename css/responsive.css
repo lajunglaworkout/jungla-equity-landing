@@ -30,11 +30,6 @@
   .depts { grid-template-columns: 1fr; }
   
   .features { grid-template-columns: 1fr; }
-  
-  /* FIX: Aspect ratio más alto para móvil vertical */
-  .pillar-image {
-    aspect-ratio: 4 / 3 !important;
-  }
 }
 
 @media (max-width: 480px) {
