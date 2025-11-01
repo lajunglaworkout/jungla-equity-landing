@@ -69,7 +69,7 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
 .ecosystem-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 80px; padding: 0 !important; margin-left: 0 !important; margin-right: 0 !important; width: 100%; box-sizing: border-box; }
 
 @media (min-width: 768px) {
-  .ecosystem-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+  .ecosystem-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
 }
 .ecosystem-video { max-width: 900px; margin: 0 auto; }
 .video-container { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
