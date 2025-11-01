@@ -53,7 +53,7 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
   padding: 120px 0; 
   background-image: 
     linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.65) 100%),
-    url('../assets/images/instalaciones/sevilla_centro_antigua_1.jpg');
+    url('https://res.cloudinary.com/ddojobqfn/image/upload/v1761986357/sevilla_centro_antigua_1_p2dihe.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
