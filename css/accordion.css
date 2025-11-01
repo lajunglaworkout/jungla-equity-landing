@@ -89,6 +89,43 @@ html {
   position: relative;
 }
 
+/* Degradado progresivo de negro a verde */
+.accordion-section:nth-child(1) .accordion-icon {
+  color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.accordion-section:nth-child(2) .accordion-icon {
+  color: rgba(180, 255, 0, 0.3);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(180, 255, 0, 0.05));
+  border-color: rgba(180, 255, 0, 0.2);
+}
+
+.accordion-section:nth-child(3) .accordion-icon {
+  color: rgba(180, 255, 0, 0.5);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(180, 255, 0, 0.1));
+  border-color: rgba(180, 255, 0, 0.3);
+}
+
+.accordion-section:nth-child(4) .accordion-icon {
+  color: rgba(180, 255, 0, 0.7);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(180, 255, 0, 0.15));
+  border-color: rgba(180, 255, 0, 0.4);
+}
+
+.accordion-section:nth-child(5) .accordion-icon {
+  color: rgba(180, 255, 0, 0.85);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(180, 255, 0, 0.2));
+  border-color: rgba(180, 255, 0, 0.5);
+}
+
+.accordion-section:nth-child(6) .accordion-icon {
+  color: rgb(180, 255, 0);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(180, 255, 0, 0.25));
+  border-color: rgba(180, 255, 0, 0.6);
+}
+
 .accordion-icon::after {
   content: '';
   position: absolute;
