@@ -293,6 +293,50 @@ h2 { font-size: clamp(32px, 6vw, 56px); margin-bottom: 50px; text-align: center;
   padding: 0;
   margin: 0;
 }
+
+/* Dashboard Video Section */
+.dashboard-video-section {
+  max-width: 1000px;
+  margin: 60px auto 80px;
+}
+.video-container-dashboard {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(180, 255, 0, 0.2);
+  transition: all 500ms;
+}
+.video-container-dashboard:hover {
+  box-shadow: 
+    0 30px 80px rgba(180, 255, 0, 0.4),
+    0 0 0 2px var(--primary-green);
+  transform: translateY(-8px);
+}
+.dashboard-video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+.video-caption-dashboard {
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  border-top: 2px solid rgba(180, 255, 0, 0.3);
+}
+.video-caption-dashboard h4 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--primary-green);
+}
+.video-caption-dashboard p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
 .passive-investment-list li {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
