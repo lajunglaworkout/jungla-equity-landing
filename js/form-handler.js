@@ -96,20 +96,25 @@ if (investmentForm) {
 
 // Mostrar mensaje de éxito
 function showSuccessMessage() {
-  const form = document.getElementById('investmentForm');
+  const form = document.getElementById('form');
   const messageDiv = document.getElementById('formMessage');
   
-  form.style.display = 'none';
-  messageDiv.style.display = 'block';
-  
-  // Scroll al mensaje
-  messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  
-  // Opcional: recargar después de 5 segundos
-  setTimeout(() => {
-    form.style.display = 'block';
-    messageDiv.style.display = 'none';
-  }, 10000);
+  if (form && messageDiv) {
+    form.style.display = 'none';
+    messageDiv.style.display = 'block';
+    
+    // Scroll al mensaje
+    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    // Opcional: recargar después de 10 segundos
+    setTimeout(() => {
+      form.style.display = 'block';
+      messageDiv.style.display = 'none';
+    }, 10000);
+  } else {
+    // Fallback: mostrar alert si no encuentra los elementos
+    alert('✅ ¡Gracias! Tu solicitud ha sido enviada correctamente.\n\nTe contactaremos en menos de 48 horas.');
+  }
 }
 
 // Mostrar mensaje de error
