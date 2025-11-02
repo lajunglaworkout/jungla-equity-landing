@@ -29,6 +29,7 @@ if (investmentForm) {
       email: formData.get('email'),
       phone: formData.get('phone'),
       investment_range: formData.get('investment'),
+      investor_profile: formData.get('investorProfile'),
       source: formData.get('source'),
       message: formData.get('message') || null
     };
@@ -56,6 +57,7 @@ if (investmentForm) {
     emailFormData.append('Email', data.email);
     emailFormData.append('Teléfono', data.phone);
     emailFormData.append('Rango de Inversión', data.investment_range);
+    emailFormData.append('Perfil de Inversor', data.investor_profile);
     emailFormData.append('Fuente', data.source);
     if (data.message) {
       emailFormData.append('Mensaje', data.message);
