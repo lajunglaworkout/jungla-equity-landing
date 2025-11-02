@@ -24,12 +24,14 @@ if (investmentForm) {
     
     // Obtener datos del formulario
     const formData = new FormData(e.target);
-    const data = {
+    const investorProfile = formData.get('investorProfile');
+    
+    // Datos para Supabase (sin investor_profile hasta que añadas la columna)
+    const supabaseData = {
       full_name: formData.get('fullName'),
       email: formData.get('email'),
       phone: formData.get('phone'),
       investment_range: formData.get('investment'),
-      investor_profile: formData.get('investorProfile'),
       source: formData.get('source'),
       message: formData.get('message') || null
     };
@@ -37,7 +39,7 @@ if (investmentForm) {
     // 1. Guardar en Supabase
     const { data: savedLead, error: supabaseError } = await supabase
       .from('investment_leads')
-      .insert([data])
+      .insert([supabaseData])
       .select()
       .single();
     
@@ -51,16 +53,16 @@ if (investmentForm) {
     // 2. Enviar email vía Web3Forms
     const emailFormData = new FormData();
     emailFormData.append('access_key', WEB3FORMS_ACCESS_KEY);
-    emailFormData.append('subject', `🚀 Nuevo Lead de Inversión: ${data.full_name}`);
+    emailFormData.append('subject', `🚀 Nuevo Lead de Inversión: ${supabaseData.full_name}`);
     emailFormData.append('from_name', 'La Jungla - Inversión Landing');
-    emailFormData.append('Nombre', data.full_name);
-    emailFormData.append('Email', data.email);
-    emailFormData.append('Teléfono', data.phone);
-    emailFormData.append('Rango de Inversión', data.investment_range);
-    emailFormData.append('Perfil de Inversor', data.investor_profile);
-    emailFormData.append('Fuente', data.source);
-    if (data.message) {
-      emailFormData.append('Mensaje', data.message);
+    emailFormData.append('Nombre', supabaseData.full_name);
+    emailFormData.append('Email', supabaseData.email);
+    emailFormData.append('Teléfono', supabaseData.phone);
+    emailFormData.append('Rango de Inversión', supabaseData.investment_range);
+    emailFormData.append('Perfil de Inversor', investorProfile || 'No especificado');
+    emailFormData.append('Fuente', supabaseData.source);
+    if (supabaseData.message) {
+      emailFormData.append('Mensaje', supabaseData.message);
     }
     
     try {
