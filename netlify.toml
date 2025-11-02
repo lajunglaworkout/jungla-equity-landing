@@ -1,0 +1,36 @@
+# Netlify Configuration
+[build]
+  publish = "."
+  
+[[redirects]]
+  from = "/robots.txt"
+  to = "/public/robots.txt"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/public/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/llm-context.json"
+  to = "/public/llm-context.json"
+  status = 200
+
+[[redirects]]
+  from = "/about.md"
+  to = "/public/about.md"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/public/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

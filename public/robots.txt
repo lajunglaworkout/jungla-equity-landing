@@ -1,0 +1,28 @@
+# robots.txt para La Jungla Workout Inversión
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /scripts/
+
+# Sitemaps
+Sitemap: https://junglainvesment.netlify.app/sitemap.xml
+
+# Crawl-delay para bots agresivos
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
