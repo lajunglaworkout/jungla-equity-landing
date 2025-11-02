@@ -26,12 +26,13 @@ if (investmentForm) {
     const formData = new FormData(e.target);
     const investorProfile = formData.get('investorProfile');
     
-    // Datos para Supabase (sin investor_profile hasta que añadas la columna)
+    // Datos para Supabase (ahora CON investor_profile)
     const supabaseData = {
       full_name: formData.get('fullName'),
       email: formData.get('email'),
       phone: formData.get('phone'),
       investment_range: formData.get('investment'),
+      investor_profile: investorProfile,
       source: formData.get('source'),
       message: formData.get('message') || null
     };
